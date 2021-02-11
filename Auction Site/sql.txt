@@ -1,0 +1,26 @@
+//database name is: auction
+//below are the tables
+
+create TABLE items(
+  id int AUTO_INCREMENT PRIMARY KEY,
+  name tinytext,
+  description text,
+  owner tinytext,
+  end_date date,
+  bid int,
+  highest_bidder tinytext
+);
+
+create table users(
+id int primary key auto_increment,
+ username varchar(100),
+ email varchar(100),
+password varchar(100)
+);
+create TABLE bids(
+  id int AUTO_INCREMENT PRIMARY KEY,
+  item_id tinytext,
+  bidder tinytext,
+  bid int,
+  date date
+);
